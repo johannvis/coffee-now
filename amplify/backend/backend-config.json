@@ -1,0 +1,61 @@
+{
+  "auth": {
+    "coffeenow752e3ad5": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "coffeenow2cd1dcad": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "providerPlugin": "awscloudformation",
+      "service": "S3AndCloudFront"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_coffeenow2cd1dcad_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "coffeenow2cd1dcad"
+        }
+      ]
+    },
+    "AMPLIFY_function_coffeenow2cd1dcad_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "coffeenow2cd1dcad"
+        }
+      ]
+    }
+  }
+}

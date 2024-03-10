@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-coffeenow-dev-73716-authRole",
+      "UnauthRoleArn": "arn:aws:iam::757004058284:role/amplify-coffeenow-dev-73716-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::757004058284:role/amplify-coffeenow-dev-73716-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-coffeenow-dev-73716-deployment",
+      "UnauthRoleName": "amplify-coffeenow-dev-73716-unauthRole",
+      "StackName": "amplify-coffeenow-dev-73716",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:757004058284:stack/amplify-coffeenow-dev-73716/055b20e0-deb1-11ee-8c7b-027dc991cd49",
+      "AmplifyAppId": "d17xkqb76iojul"
+    },
+    "categories": {
+      "auth": {
+        "coffeenow752e3ad5": {}
+      },
+      "function": {
+        "coffeenow2cd1dcad": {
+          "deploymentBucketName": "amplify-coffeenow-dev-73716-deployment",
+          "s3Key": "amplify-builds/coffeenow2cd1dcad-6a532f5967496f415162-build.zip"
+        }
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      }
+    }
+  }
+}
