@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import MyDropdown from './MyDropDown';
 
 function App() {
   return (
@@ -8,7 +10,11 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload. boom boom
-          wow - <b>Toyota</b>
+          wow - <h1>Toyota</h1>
+          <div>
+      <h1>React Select Example</h1>
+      <MyDropdown />
+    </div>
         </p>
         <a
           className="App-link"
