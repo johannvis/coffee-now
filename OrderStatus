@@ -1,6 +1,7 @@
 // App.js
 
 import React, { useState } from 'react';
+import logo from './logo.svg';
 import './App.css';
 import ShopSelection from './ShopSelection';
 import DrinkSelection from './DrinkSelection';
@@ -10,23 +11,29 @@ function App() {
   const [selectedShop, setSelectedShop] = useState(null);
   const [selectedDrink, setSelectedDrink] = useState(null);
   const [selectedCondiments, setSelectedCondiments] = useState([]);
+  const [orderStatus, setOrderStatus] = useState(null);
 
   const handleOrder = () => {
-    // Code to handle order submission
-    console.log('Order placed!');
+    // Simulating order process with a setTimeout
+    setOrderStatus('Order acknowledged');
+    setTimeout(() => {
+      const eta = new Date();
+      eta.setMinutes(eta.getMinutes() + 15); // Example: ETA 15 minutes from now
+      setOrderStatus(`Order completion ETA: ${eta.toLocaleTimeString()}`);
+    }, 3000); // Simulating order processing time
   };
 
   return (
     <div className="App">
       <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <h1>Welcome to our Cafe</h1>
-      </header>
-      <div className="Order-container">
         <ShopSelection onSelect={setSelectedShop} />
         <DrinkSelection onSelect={setSelectedDrink} />
         <CondimentSelection onSelect={setSelectedCondiments} />
         <button onClick={handleOrder}>Place Order</button>
-      </div>
+        {orderStatus && <p>{orderStatus}</p>}
+      </header>
     </div>
   );
 }
