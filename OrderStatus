@@ -1,41 +1,41 @@
-// App.js
+// // App.js
 
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ShopSelection from './ShopSelection';
-import DrinkSelection from './DrinkSelection';
-import CondimentSelection from './CondimentSelection';
+// import React, { useState } from 'react';
+// import logo from './logo.svg';
+// import './App.css';
+// import ShopSelection from './ShopSelection';
+// import DrinkSelection from './DrinkSelection';
+// import CondimentSelection from './CondimentSelection';
 
-function App() {
-  const [selectedShop, setSelectedShop] = useState(null);
-  const [selectedDrink, setSelectedDrink] = useState(null);
-  const [selectedCondiments, setSelectedCondiments] = useState([]);
-  const [orderStatus, setOrderStatus] = useState(null);
+// function App() {
+//   const [selectedShop, setSelectedShop] = useState(null);
+//   const [selectedDrink, setSelectedDrink] = useState(null);
+//   const [selectedCondiments, setSelectedCondiments] = useState([]);
+//   const [orderStatus, setOrderStatus] = useState(null);
 
-  const handleOrder = () => {
-    // Simulating order process with a setTimeout
-    setOrderStatus('Order acknowledged');
-    setTimeout(() => {
-      const eta = new Date();
-      eta.setMinutes(eta.getMinutes() + 15); // Example: ETA 15 minutes from now
-      setOrderStatus(`Order completion ETA: ${eta.toLocaleTimeString()}`);
-    }, 3000); // Simulating order processing time
-  };
+//   const handleOrder = () => {
+//     // Simulating order process with a setTimeout
+//     setOrderStatus('Order acknowledged');
+//     setTimeout(() => {
+//       const eta = new Date();
+//       eta.setMinutes(eta.getMinutes() + 15); // Example: ETA 15 minutes from now
+//       setOrderStatus(`Order completion ETA: ${eta.toLocaleTimeString()}`);
+//     }, 3000); // Simulating order processing time
+//   };
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to our Cafe</h1>
-        <ShopSelection onSelect={setSelectedShop} />
-        <DrinkSelection onSelect={setSelectedDrink} />
-        <CondimentSelection onSelect={setSelectedCondiments} />
-        <button onClick={handleOrder}>Place Order</button>
-        {orderStatus && <p>{orderStatus}</p>}
-      </header>
-    </div>
-  );
-}
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <h1>Welcome to our Cafe</h1>
+//         <ShopSelection onSelect={setSelectedShop} />
+//         <DrinkSelection onSelect={setSelectedDrink} />
+//         <CondimentSelection onSelect={setSelectedCondiments} />
+//         <button onClick={handleOrder}>Place Order</button>
+//         {orderStatus && <p>{orderStatus}</p>}
+//       </header>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;

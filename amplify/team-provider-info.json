@@ -19,10 +19,22 @@
         "coffeenow2cd1dcad": {
           "deploymentBucketName": "amplify-coffeenow-dev-73716-deployment",
           "s3Key": "amplify-builds/coffeenow2cd1dcad-6a532f5967496f415162-build.zip"
+        },
+        "CreateNewOrder": {
+          "deploymentBucketName": "amplify-coffeenow-dev-73716-deployment",
+          "s3Key": "amplify-builds/CreateNewOrder-4f75444b4e6e55536670-build.zip"
+        },
+        "coffeenowb3f21ce5": {
+          "deploymentBucketName": "amplify-coffeenow-dev-73716-deployment",
+          "s3Key": "amplify-builds/coffeenowb3f21ce5-586d41686d5074386444-build.zip"
         }
       },
       "hosting": {
         "S3AndCloudFront": {}
+      },
+      "api": {
+        "order": {},
+        "api17fef00a": {}
       }
     }
   }
