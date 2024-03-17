@@ -4,10 +4,9 @@ import ShopSelection from './ShopSelection';
 import DrinkSelection from './DrinkSelection';
 import CondimentSelection from './CondimentSelection';
 import { Amplify } from 'aws-amplify';
-import { API } from 'aws-amplify'; // Updated import
+import { get, post } from '@aws-amplify/api';
 import config from './aws-exports';
-import { generateClient } from 'aws-amplify/api';
-const client = generateClient();
+
 
 Amplify.configure(config);
 
@@ -26,11 +25,11 @@ function App() {
       }
     };
 
-    const apiName = 'api17fef00a'; // Your API name
-    const path = '/items'; // Your API path
+    const apiName = 'order'; // Your API name
+    const path = '/'; // Your API path
 
     try {
-      const response = await client.post(apiName, path, orderDetails);
+      const response = await post(apiName, path, orderDetails);
       console.log('Order response:', response);
       alert('Order placed successfully!');
     } catch (error) {
