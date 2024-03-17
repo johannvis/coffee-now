@@ -8,6 +8,7 @@ import { get, post } from '@aws-amplify/api';
 import config from './aws-exports';
 
 
+
 Amplify.configure(config);
 
 
@@ -25,11 +26,9 @@ function App() {
       }
     };
 
-    const apiName = 'order'; // Your API name
-    const path = '/'; // Your API path
 
     try {
-      const response = await post(apiName, path, orderDetails);
+      const response = await post('order', '', orderDetails);
       console.log('Order response:', response);
       alert('Order placed successfully!');
     } catch (error) {
