@@ -3,7 +3,7 @@
   "paths": {
     "/items": {
       "name": "/items",
-      "lambdaFunction": "CreateNewOrder",
+      "lambdaFunction": "AddOrder",
       "permissions": {
         "setting": "open"
       }

@@ -1,19 +1,5 @@
 {
   "api": {
-    "api17fef00a": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "coffeenowb3f21ce5"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    },
     "order": {
       "dependsOn": [
         {
@@ -22,53 +8,16 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "CreateNewOrder"
+          "resourceName": "AddOrder"
         }
       ],
       "providerPlugin": "awscloudformation",
       "service": "API Gateway"
     }
   },
-  "auth": {
-    "coffeenow752e3ad5": {
-      "customAuth": false,
-      "dependsOn": [],
-      "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 8
-        },
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
-      "providerPlugin": "awscloudformation",
-      "service": "Cognito"
-    }
-  },
+  "auth": {},
   "function": {
-    "CreateNewOrder": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "coffeenow2cd1dcad": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "coffeenowb3f21ce5": {
+    "AddOrder": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -81,51 +30,19 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_CreateNewOrder_deploymentBucketName": {
+    "AMPLIFY_function_AddOrder_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "CreateNewOrder"
+          "resourceName": "AddOrder"
         }
       ]
     },
-    "AMPLIFY_function_CreateNewOrder_s3Key": {
+    "AMPLIFY_function_AddOrder_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "CreateNewOrder"
-        }
-      ]
-    },
-    "AMPLIFY_function_coffeenow2cd1dcad_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "coffeenow2cd1dcad"
-        }
-      ]
-    },
-    "AMPLIFY_function_coffeenow2cd1dcad_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "coffeenow2cd1dcad"
-        }
-      ]
-    },
-    "AMPLIFY_function_coffeenowb3f21ce5_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "coffeenowb3f21ce5"
-        }
-      ]
-    },
-    "AMPLIFY_function_coffeenowb3f21ce5_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "coffeenowb3f21ce5"
+          "resourceName": "AddOrder"
         }
       ]
     }

@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "CreateNewOrder",
+            "AddOrder",
             {
               "Fn::Join": [
                 "",
                 [
-                  "CreateNewOrder",
+                  "AddOrder",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "coffeenowLambdaRole41f6fa25",
+            "coffeenowLambdaRole1d4bd761",
             {
               "Fn::Join": [
                 "",
                 [
-                  "coffeenowLambdaRole41f6fa25",
+                  "coffeenowLambdaRole1d4bd761",
                   "-",
                   {
                     "Ref": "env"
