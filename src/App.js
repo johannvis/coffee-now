@@ -3,8 +3,8 @@ import './App.css';
 import ShopSelection from './ShopSelection';
 import DrinkSelection from './DrinkSelection';
 import CondimentSelection from './CondimentSelection';
-import Amplify, { API } from 'aws-amplify'; // Ensure Amplify is correctly imported
-import config from './aws-exports';
+import Amplify, { API } from 'aws-amplify'; // Ensure Amplify and API are correctly imported
+import config from './aws-exports'; // Ensure this imports your aws-exports.js file
 
 Amplify.configure(config);
 
@@ -22,9 +22,10 @@ function App() {
       }
     };
 
-    // Replace 'order' with your actual API name and add the appropriate path
+    // Use the API name 'order' as configured in your aws-exports.js
+    // No path is appended as your invoke URL suggests it's the root endpoint for 'dev'
     try {
-      const response = await API.post('order', '/orders', orderDetails); // Assuming '/orders' is your endpoint
+      const response = await API.post('order', '/dev', orderDetails); // Assuming 'dev' is part of the path you want to hit
       console.log('Order response:', response);
       alert('Order placed successfully!');
     } catch (error) {
