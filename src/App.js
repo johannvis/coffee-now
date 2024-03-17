@@ -3,14 +3,10 @@ import './App.css';
 import ShopSelection from './ShopSelection';
 import DrinkSelection from './DrinkSelection';
 import CondimentSelection from './CondimentSelection';
-import { Amplify } from 'aws-amplify';
-import { get, post } from '@aws-amplify/api';
+import Amplify, { API } from 'aws-amplify'; // Ensure Amplify is correctly imported
 import config from './aws-exports';
 
-
-
 Amplify.configure(config);
-
 
 function App() {
   const [selectedShop, setSelectedShop] = useState(null);
@@ -26,9 +22,9 @@ function App() {
       }
     };
 
-
+    // Replace 'order' with your actual API name and add the appropriate path
     try {
-      const response = await post('order', '', orderDetails);
+      const response = await API.post('order', '/orders', orderDetails); // Assuming '/orders' is your endpoint
       console.log('Order response:', response);
       alert('Order placed successfully!');
     } catch (error) {
